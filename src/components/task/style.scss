@@ -1,0 +1,53 @@
+.task{
+  position: relative;
+  cursor: move;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid #f5f5f5;
+
+  &:not(.task--placeholder):hover{
+    background-color: #f5f5f5;
+
+    .task__action{
+      transform: translateX(0);
+    }
+  }
+
+  &__edit{
+    display: flex;
+
+    input{
+      width: 100%;
+      background: transparent;
+      padding: 0;
+      border: 1px solid #2dc973;
+    }
+  }
+
+  span{
+    display: inline-block;
+    padding: .4rem 0;
+    cursor: pointer;
+
+    &:hover{
+      color: #2dc973;
+    }
+  }
+
+  &__action{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(101%);
+    transition: all .3s ease-in-out;
+  }
+
+  &--placeholder{
+    background-color: #dfdfdf;
+    cursor: default;
+
+    *{
+      visibility: hidden;
+    }
+  }
+}

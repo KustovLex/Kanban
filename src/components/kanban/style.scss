@@ -1,0 +1,9 @@
+.kanban{
+  width: 960px;
+  margin: 30px auto;
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
