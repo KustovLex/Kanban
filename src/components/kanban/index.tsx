@@ -11,7 +11,6 @@ interface IProps {}
 interface IInjectedProps {
   applicationStore: ApplicationStore;
 }
-reaction(() => { true }, () => { console.log("check") })
 
 @inject("applicationStore")
 @observer
@@ -22,11 +21,6 @@ export class Kanban extends React.Component<IProps> {
 
   constructor(props: IProps) {
     super(props);
-    reaction(() => { true }, () => { console.log("check") })
-  }
-
-  componentDidMount() {
-    reaction(() => { true }, () => { console.log("check") })
   }
 
   render() {
